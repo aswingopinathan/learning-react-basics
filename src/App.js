@@ -7,13 +7,13 @@ function App() {
     setCount(count + 1);
   } 
   const obj = {
-    title:'1st Counter', count
+    title:'1st Counter', count,place:'Thrissur'
   }
   return (
     <div>
       <button onClick={addCount}>Add</button>
       <Counter {...obj}/>
-      <Counter title='2nd Counter' count={count}/>
+      <Counter title='2nd Counter' count={count} place='Tvm'/>
     </div>
   );
 }
