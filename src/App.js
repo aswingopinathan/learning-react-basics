@@ -1,19 +1,14 @@
 import './App.css'
-import Employee from './Employee';
+import Counter from './Counter';
+import {useState} from 'react'
 function App() {
-  
- let emp = [{name:'Aswin',age:26},
- {name:'Abhi',age:24},
- {name:'Abinav',age:22}]
+  const [state,setState] = useState()
   return (
     <div>
-      {
-        emp.map((obj,index)=>{
-          return(
-            <Employee key={index} {...obj} />
-          )
-        })
-      }
+      <h1 onClick={()=>{setState(!state)}}>View hidden </h1>
+      {/* { state ? <Counter/> : null} */}
+      {/* easy method below */}
+      { state && <Counter/>}
     </div>
   );
 }
